@@ -2,8 +2,8 @@ import { Navigate, Route, Routes } from "react-router-dom";
 import Nav from "./components/Nav";
 import CreatePage from "./pages/CreatePage";
 import HomePage from "./pages/HomePage";
-import UserDetailPage from "./pages/UserDetailPage";
-import UserUpdatePage from "./pages/UserUpdatePage";
+import GameDetailPage from "./pages/GameDetailPage";
+import GameUpdatePage from "./pages/GameUpdatePage";
 function App() {
   return (
     <main>
@@ -11,8 +11,8 @@ function App() {
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/create" element={<CreatePage />} />
-        <Route path="/users/:id" element={<UserDetailPage />} />
-        <Route path="/users/:id/update" element={<UserUpdatePage />} />
+        <Route path="/games/:id" element={<GameDetailPage />} />
+        <Route path="/games/:id/update" element={<GameUpdatePage />} />
 
         <Route path="*" element={<Navigate to="/" />} />
       </Routes>
