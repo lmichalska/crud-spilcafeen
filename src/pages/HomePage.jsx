@@ -7,8 +7,6 @@ export default function HomePage() {
   const [locationFilter, setLocationFilter] = useState("");
   const [languageFilter, setLanguageFilter] = useState("");
   const sortBy = "name";
-  const languages = [...new Set(games.map(game => game.language))];
-  const locations = [...new Set(games.map(game => game.location))];
 
   useEffect(() => {
     async function getGames() {
@@ -22,7 +20,7 @@ export default function HomePage() {
         localStorage.setItem("games", JSON.stringify(gamesData)); // Store in localStorage for future use
       }
 
-      console.log(gamesData);
+      console.log("Games data set in state:", gamesData); // Log the games data
       setGames(gamesData);
     }
 
@@ -31,12 +29,16 @@ export default function HomePage() {
 
   async function fetchGames() {
     try {
-      const response = await fetch("/games.json"); // Correct path
+      const response = await fetch("/games.json");
+      if (!response.ok) {
+        throw new Error("Network response was not ok");
+      }
       const data = await response.json();
+      console.log("Fetched data:", data); // Log fetched data
       return data;
     } catch (error) {
       console.error("Error fetching the games data:", error);
-      return []; // Return empty array in case of error
+      return []; // Return an empty array if there's an error
     }
   }
 
@@ -64,7 +66,7 @@ export default function HomePage() {
           Filter by Location
           <select onChange={e => setLocationFilter(e.target.value)}>
             <option value="">Select Location</option>
-            {locations.map(location => (
+            {[...new Set(games.map(game => game.location))].map(location => (
               <option key={location} value={location}>
                 {location}
               </option>
@@ -75,7 +77,7 @@ export default function HomePage() {
           Filter by Language
           <select onChange={e => setLanguageFilter(e.target.value)}>
             <option value="">Select Language</option>
-            {languages.map(language => (
+            {[...new Set(games.map(game => game.language))].map(language => (
               <option key={language} value={language}>
                 {language}
               </option>
@@ -84,9 +86,13 @@ export default function HomePage() {
         </label>
       </form>
       <section className="grid">
-        {filteredGames.map(game => (
-          <Game game={game} key={game.id} />
-        ))}
+        {filteredGames.length > 0 ? (
+          filteredGames.map(game => (
+            <Game game={game} key={game.name} />
+          ))
+        ) : (
+          <p>No games available.</p>
+        )}
       </section>
     </section>
   );
