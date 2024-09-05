@@ -30,7 +30,8 @@ export default function HomePage() {
 
   async function fetchGames() {
     try {
-      const response = await fetch(/"crud-spilcafeen/games.json");
+      // Use relative path directly to games.json
+      const response = await fetch("/crud-spilcafeen/games.json");
       if (!response.ok) {
         throw new Error("Network response was not ok");
       }
@@ -42,6 +43,62 @@ export default function HomePage() {
       return [];
     }
   }
+
+  let filteredGames = games.filter(game =>
+    game.name.toLowerCase().includes(searchTerm.toLowerCase())
+  );
+
+  if (locationFilter !== "") {
+    filteredGames = filteredGames.filter(game => game.location === locationFilter);
+  }
+
+  if (languageFilter !== "") {
+    filteredGames = filteredGames.filter(game => game.language === languageFilter);
+  }
+
+  filteredGames.sort((game1, game2) => game1[sortBy].localeCompare(game2[sortBy]));
+
+  return (
+    <section className="page">
+      <form className="grid-filter" role="search">
+        <label>
+          Search by Name <input placeholder="Search" type="search" onChange={e => setSearchTerm(e.target.value)} />
+        </label>
+        <label>
+          Filter by Location
+          <select onChange={e => setLocationFilter(e.target.value)}>
+            <option value="">Select Location</option>
+            {[...new Set(games.map(game => game.location))].map(location => (
+              <option key={location} value={location}>
+                {location}
+              </option>
+            ))}
+          </select>
+        </label>
+        <label>
+          Filter by Language
+          <select onChange={e => setLanguageFilter(e.target.value)}>
+            <option value="">Select Language</option>
+            {[...new Set(games.map(game => game.language))].map(language => (
+              <option key={language} value={language}>
+                {language}
+              </option>
+            ))}
+          </select>
+        </label>
+      </form>
+      <section className="grid">
+        {filteredGames.length > 0 ? (
+          filteredGames.map(game => (
+            <Game game={game} key={game.name} />
+          ))
+        ) : (
+          <p>No games available.</p>
+        )}
+      </section>
+    </section>
+  );
+}
 
   // Filter and
 
