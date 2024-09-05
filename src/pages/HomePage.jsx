@@ -31,7 +31,7 @@ export default function HomePage() {
   useEffect(() => {
     async function fetchGames() {
       try {
-        const response = await fetch("/public/games.json"); 
+        const response = await fetch("/games.json"); 
         const data = await response.json();
         setGames(data);
       } catch (error) {
