@@ -30,8 +30,7 @@ export default function HomePage() {
 
   async function fetchGames() {
     try {
-      // Use relative path directly to games.json
-      const response = await fetch("/crud-spilcafeen/games.json");
+      const response = await fetch('/crud-spilcafeen/games.json');
       if (!response.ok) {
         throw new Error("Network response was not ok");
       }
