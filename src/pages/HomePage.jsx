@@ -30,7 +30,7 @@ export default function HomePage() {
 
   async function fetchGames() {
     try {
-      const response = await fetch("/crud-spilcafeen/games.json");
+      const response = await fetch("/crud-spilcafeen/game.json");
       if (!response.ok) {
         throw new Error("Network response was not ok");
       }
