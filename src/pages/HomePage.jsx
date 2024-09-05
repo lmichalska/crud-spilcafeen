@@ -29,17 +29,19 @@ export default function HomePage() {
     }
   }, []);
 
-  async function fetchGames() {
-    try {
-      const response = await fetch("https://raw.githubusercontent.com/cederdorff/race/master/data/users.json");
-      const data = await response.json();
-      localStorage.setItem("games", JSON.stringify(data));
-      return data;
-    } catch (error) {
-      console.error("Error fetching games:", error);
-      return [];
+  useEffect(() => {
+    async function fetchGames() {
+      try {
+        const response = await fetch("/public/games.json"); // Fetch the JSON file from public/data
+        const data = await response.json();
+        setGames(data);
+      } catch (error) {
+        console.error("Error fetching the games data:", error);
+      }
     }
-  }
+
+    fetchGames();
+  }, []);
 
   // Filter games by search term, location, and language
   let filteredGames = games.filter(game =>

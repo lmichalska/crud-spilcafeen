@@ -11,12 +11,11 @@ export default function UpdatePage() {
     const data = localStorage.getItem("games");
     const gamesData = JSON.parse(data) || [];
     setGame(gamesData.find(game => game.id === id));
-  }, [id]); // <--- "[params.id]" VERY IMPORTANT!!!
+  }, [id]); 
 
   async function updateGame(gameToUpdate) {
     const data = localStorage.getItem("games");
     const gamesData = JSON.parse(data) || [];
-    // map through the games
     const updatedGames = gamesData.map(game => {
       // if the game id is the same as the id from the params
       if (game.id === id) {
