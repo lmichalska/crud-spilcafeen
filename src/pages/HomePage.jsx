@@ -15,7 +15,7 @@ export default function HomePage() {
 
       if (data) {
         gamesData = JSON.parse(data);
-        console.log("Loaded 50 games from localStorage:", gamesData);
+        console.log("Loaded games from localStorage:", gamesData);
       } else {
         gamesData = await fetchGames();
         localStorage.setItem("games", JSON.stringify(gamesData));
