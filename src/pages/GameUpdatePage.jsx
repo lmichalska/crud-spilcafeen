@@ -17,19 +17,19 @@ export default function UpdatePage() {
     const data = localStorage.getItem("games");
     const gamesData = JSON.parse(data) || [];
     const updatedGames = gamesData.map(game => {
-      // if the game id is the same as the id from the params
+
       if (game.id === id) {
-        return { ...game, ...gameToUpdate }; // return the game with the updated data
+        return { ...game, ...gameToUpdate }; 
       }
-      return game; // return the game without updating
+      return game; 
     });
 
-    localStorage.setItem("games", JSON.stringify(updatedGames)); // save the games state to local storage
-    navigate(`/games/${id}`); // navigate to the game detail page
+    localStorage.setItem("games", JSON.stringify(updatedGames)); 
+    navigate(`/games/${id}`); 
   }
 
   function handleCancel() {
-    navigate(-1); // go back
+    navigate(-1); 
   }
 
   return (

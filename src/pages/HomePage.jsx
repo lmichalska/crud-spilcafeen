@@ -6,8 +6,7 @@ export default function HomePage() {
   const [searchTerm, setSearchTerm] = useState("");
   const [locationFilter, setLocationFilter] = useState("");
   const [languageFilter, setLanguageFilter] = useState("");
-  const sortBy = "name"; // Sorting by game name
-
+  const sortBy = "name";
   const languages = [...new Set(games.map(game => game.language))];
   const locations = [...new Set(games.map(game => game.location))];
 
@@ -32,7 +31,7 @@ export default function HomePage() {
   useEffect(() => {
     async function fetchGames() {
       try {
-        const response = await fetch("/public/games.json"); // Fetch the JSON file from public/data
+        const response = await fetch("/public/games.json"); 
         const data = await response.json();
         setGames(data);
       } catch (error) {
@@ -43,22 +42,20 @@ export default function HomePage() {
     fetchGames();
   }, []);
 
-  // Filter games by search term, location, and language
   let filteredGames = games.filter(game =>
     game.name.toLowerCase().includes(searchTerm.toLowerCase())
   );
 
-  // Apply location filter if selected
+
   if (locationFilter !== "") {
     filteredGames = filteredGames.filter(game => game.location === locationFilter);
   }
 
-  // Apply language filter if selected
+
   if (languageFilter !== "") {
     filteredGames = filteredGames.filter(game => game.language === languageFilter);
   }
 
-  // Sort games by a defined field
   filteredGames.sort((game1, game2) => game1[sortBy].localeCompare(game2[sortBy]));
 
   return (

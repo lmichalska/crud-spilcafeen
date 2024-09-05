@@ -1,10 +1,9 @@
 import { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
-// Assuming you're using GameDetail:
 import GameDetail from "../components/GameDetail"; 
 
 export default function GameDetailPage() {
-  const [game, setGameDetail] = useState(null); // initialize with null
+  const [game, setGameDetail] = useState(null); 
   const { id } = useParams();
   const navigate = useNavigate();
 
@@ -15,13 +14,12 @@ export default function GameDetailPage() {
     if (game) {
       setGameDetail(game); 
     } else {
-      // Navigate to a "not found" page or show an error
       navigate("/not-found");
     }
   }, [id, navigate]);
 
   function showDeleteDialog() {
-    const shouldDelete = window.confirm(`Do you want to delete "${game?.name}"?`); // handle possible null
+    const shouldDelete = window.confirm(`Do you want to delete "${game?.name}"?`); 
     if (shouldDelete) {
       deleteGame();
     }
@@ -45,7 +43,7 @@ export default function GameDetailPage() {
         <h1>{game?.name || "Game Not Found"}</h1> 
         {game ? (
           <>
-            <GameDetail game={game} /> {/* Assuming GameDetail is the correct component */}
+            <GameDetail game={game} /> {}
             <div className="btns">
               <button className="btn-cancel" onClick={showDeleteDialog}>
                 Delete game
@@ -54,7 +52,7 @@ export default function GameDetailPage() {
             </div>
           </>
         ) : (
-          <p>Loading game details...</p> // Or handle the "game not found" case here
+          <p>Loading game details...</p> 
         )}
       </div>
     </section>
