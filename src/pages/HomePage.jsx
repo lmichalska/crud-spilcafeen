@@ -30,11 +30,7 @@ export default function HomePage() {
 
   async function fetchGames() {
     try {
-<<<<<<< Updated upstream
-      const response = await fetch('/crud-spilcafeen/games.json');
-=======
       const response = await fetch("/crud-spilcafeen/games.json");
->>>>>>> Stashed changes
       if (!response.ok) {
         throw new Error("Network response was not ok");
       }
