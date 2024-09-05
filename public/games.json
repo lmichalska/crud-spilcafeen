@@ -1,80 +1,83 @@
 [
-    {
-      "description": "Bears vs Babies is a card game in which you build handsome, incredible monsters who go to war with horrible, awful babies. The shared dec…",
-      "image": "/images/bears.webp",
-      "language": "English",
-      "location": "All",
-      "name": "Bears vs. Babies",
-      "place": "Aalborg, Vestergade, Fredensgade (SMÅ)"
-    },
-    {
-      "description": "In HINT, your teammates have to guess what you are trying to tell them. Along the way you both mime, draw, hum and talk about everythin…",
-      "image": "/images/hint.jpg",
-      "language": "English/Danish",
-      "location": "All",
-      "name": "Hint",
-      "place": "Aalborg (C3), Vestergade (D5), Fredensgade (H1)"
-    },
-    {
-      "description": "Gift ved første blik (\"Married at First Sight\") is a reality tv show of Danish origin. This game casts two players as newlyweds, and th…",
-      "image": "/images/gift.webp",
-      "language": "Danish",
-      "location": "All",
-      "name": "Gift ved Første Blik",
-      "place": "Aalborg (C3), Vestergade (H1), Fredensgade (B2)"
-    },
-    {
-      "description": "On the 11th of July, 1899 at 10 a.m., the Union Pacific Express has left Folsom, New Mexico, with 47 passengers on board. After a fe…",
-      "image": "/images/colt.jpeg",
-      "language": "English/Danish",
-      "location": "Aarhus",
-      "name": "Colt Express",
-      "place": "Vestergade (C2), Fredensgade (A1)"
-    },
-    {
-      "description": "You have been assigned to lead an ancient monastery and its brewery. Now it's your time to brew the best beer under God's blue sky! Th…",
-      "image": "/images/heaven.jpg",
-      "language": "English",
-      "location": "Aarhus",
-      "name": "Heaven & Ale",
-      "people": "2-4",
-      "place": "Fredensgade (H1)"
-    },
-    {
-      "description": "Building blocks for adults? In this fast-paced game, players must uncover and copy building plans of various difficulty, each showing 1…",
-      "image": "/images/make.jpg",
-            "language": "Danish",
-      "location": "Aarhus",
-      "name": "Make 'n Break",
-      "place": "Vestergade (D2)"
-    },
-    {
-      "description": "Chimera Station brings a new twist to the worker placement genre: customizable workers. Each worker can be modified in-game by splicin…",
-      "image": "/images/chimera.webp",      "language": "English",
-      "location": "Aalborg",
-      "name": "Chimera Station",
-      "place": "Aalborg (B1)"
-    },
-    {
-      "description": "In Celestia, a revamped version of Cloud 9, you board an aircraft with a team of adventurers to perform many trips through the cities o…",
-      "image": "/images/celestia.jpg",      "language": "English",
-      "location": "Aarhus",
-      "name": "Celestia",
-      "place": "Vestergade (C4)"
-    },
-    {
-      "description": "Develop the surroundings of Rome with Houses, Villas, Spas, and Monuments. Each player starts with a set of wooden structure tokens and …",
-      "image": "/images/allroads.jpg",      "language": "Danish",
-      "location": "Aalborg",
-      "name": "All Roads",
-      "place": "Aalborg (D6)"
-    }    
-    {
-      "description": "In the Gloom card game, you assume control of the fate of an eccentric family of misfits and misanthropes. The goal of the game is sad, but simple: you want your characters to suffer the greatest tragedies possible before passing on to the well-deserved respite of death.",
-      "image": "/images/gloom.jpg",      "language": "English",
-      "location": "All",
-      "name": "Gloom",
-      "place": "Aalborg, Vestergade, Fredensgade (SMÅ)"
-    }
-  ]
-  
+  {
+    "description": "Bears vs Babies is a card game in which you build handsome, incredible monsters who go to war with horrible, awful babies. The shared dec…",
+    "image": "/images/bears.webp",
+    "language": "English",
+    "location": "All",
+    "name": "Bears vs. Babies",
+    "place": "Aalborg, Vestergade, Fredensgade (SMÅ)"
+  },
+  {
+    "description": "In HINT, your teammates have to guess what you are trying to tell them. Along the way you both mime, draw, hum and talk about everythin…",
+    "image": "/images/hint.jpg",
+    "language": "English/Danish",
+    "location": "All",
+    "name": "Hint",
+    "place": "Aalborg (C3), Vestergade (D5), Fredensgade (H1)"
+  },
+  {
+    "description": "Gift ved første blik (\"Married at First Sight\") is a reality tv show of Danish origin. This game casts two players as newlyweds, and th…",
+    "image": "/images/gift.webp",
+    "language": "Danish",
+    "location": "All",
+    "name": "Gift ved Første Blik",
+    "place": "Aalborg (C3), Vestergade (H1), Fredensgade (B2)"
+  },
+  {
+    "description": "On the 11th of July, 1899 at 10 a.m., the Union Pacific Express has left Folsom, New Mexico, with 47 passengers on board. After a fe…",
+    "image": "/images/colt.jpeg",
+    "language": "English/Danish",
+    "location": "Aarhus",
+    "name": "Colt Express",
+    "place": "Vestergade (C2), Fredensgade (A1)"
+  },
+  {
+    "description": "You have been assigned to lead an ancient monastery and its brewery. Now it's your time to brew the best beer under God's blue sky! Th…",
+    "image": "/images/heaven.jpg",
+    "language": "English",
+    "location": "Aarhus",
+    "name": "Heaven & Ale",
+    "people": "2-4",
+    "place": "Fredensgade (H1)"
+  },
+  {
+    "description": "Building blocks for adults? In this fast-paced game, players must uncover and copy building plans of various difficulty, each showing 1…",
+    "image": "/images/make.jpg",
+    "language": "Danish",
+    "location": "Aarhus",
+    "name": "Make 'n Break",
+    "place": "Vestergade (D2)"
+  },
+  {
+    "description": "Chimera Station brings a new twist to the worker placement genre: customizable workers. Each worker can be modified in-game by splicin…",
+    "image": "/images/chimera.webp",
+    "language": "English",
+    "location": "Aalborg",
+    "name": "Chimera Station",
+    "place": "Aalborg (B1)"
+  },
+  {
+    "description": "In Celestia, a revamped version of Cloud 9, you board an aircraft with a team of adventurers to perform many trips through the cities o…",
+    "image": "/images/celestia.jpg",
+    "language": "English",
+    "location": "Aarhus",
+    "name": "Celestia",
+    "place": "Vestergade (C4)"
+  },
+  {
+    "description": "Develop the surroundings of Rome with Houses, Villas, Spas, and Monuments. Each player starts with a set of wooden structure tokens and …",
+    "image": "/images/allroads.jpg",
+    "language": "Danish",
+    "location": "Aalborg",
+    "name": "All Roads",
+    "place": "Aalborg (D6)"
+  },
+  {
+    "description": "In the Gloom card game, you assume control of the fate of an eccentric family of misfits and misanthropes. The goal of the game is sad, but simple: you want your characters to suffer the greatest tragedies possible before passing on to the well-deserved respite of death.",
+    "image": "/images/gloom.jpg",
+    "language": "English",
+    "location": "All",
+    "name": "Gloom",
+    "place": "Aalborg, Vestergade, Fredensgade (SMÅ)"
+  }
+]
