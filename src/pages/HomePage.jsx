@@ -88,17 +88,17 @@ export default function HomePage() {
         </label>
       </form>
       <section className="grid">
-        {filteredGames.length > 0 ? (
-          filteredGames.map(game => (
-            <Game game={game} key={game.name} />
-          ))
-        ) : (
-          <p>No games available.</p>
-        )}
+  {filteredGames.length > 0 ? (
+    filteredGames.map(game => (
+      <div key={game.name}>{game.name}</div>
+    ))
+  ) : (
+    <p>No games available.</p>
+  )}
+</section>
+
       </section>
-    </section>
   );
 }
 
-  // Filter and
 
